@@ -69,7 +69,7 @@ async function run() {
             const filter = { _id: new ObjectId(id) }
             const modifiedData = {
                 $set: {
-                    updatedBooking
+                    ...updatedBooking
                 }
             }
             const result = await bookingsCollection.updateOne(filter, modifiedData);
